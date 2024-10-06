@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_signup"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity">
+
+  <ScrollView
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+      <LinearLayout
+          android:id="@+id/signup_top"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:orientation="vertical"
+          android:gravity="center"
+          android:layout_centerHorizontal="true"
+          android:layout_marginTop="30dp">
+
+        <ImageView
+            android:id="@+id/signup_log"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:src="@drawable/log"
+            android:layout_marginTop="60dp">
+        </ImageView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sign Up"
+            android:textSize="32sp"
+            android:textColor="@color/black"
+            android:textStyle="bold">
+        </TextView>
+      </LinearLayout>
+
+      <LinearLayout
+          android:id="@+id/signup_middle"
+          android:gravity="center_horizontal"
+          android:layout_marginTop="30dp"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/text_email"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/rounded_corner"
+            android:hint="Enter your email">
+        </EditText>
+        <EditText
+            android:id="@+id/text_password"
+            android:layout_width="300dp"
+            android:layout_marginTop="16dp"
+            android:layout_height="50dp"
+            android:background="@drawable/rounded_corner"
+            android:hint="Enter your password"/>
+        <EditText
+            android:id="@+id/text_confirm"
+            android:layout_width="300dp"
+            android:layout_marginTop="16dp"
+            android:layout_height="50dp"
+            android:background="@drawable/rounded_corner"
+            android:hint="Confirm your password"/>
+
+        <Button
+            android:id="@+id/btn_signup"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/rounded_corner"
+            android:text="Sign Up"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:textSize="18sp"
+            android:textStyle="italic"
+            android:textColor="@color/black"
+            android:text="Already have an account?"/>
+        <TextView
+            android:layout_marginTop="10dp"
+            android:id="@+id/btn_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Login"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"/>
+      </LinearLayout>
+    </LinearLayout>
+  </ScrollView>
+
+  <ProgressBar
+      android:id="@+id/processbar_signup"
+      android:visibility="gone"
+      android:layout_width="100dp"
+      android:layout_height="100dp"
+      android:layout_centerHorizontal="true"
+      android:layout_centerVertical="true"
+      android:indeterminateTint="@color/primary_color"/>
+</RelativeLayout>

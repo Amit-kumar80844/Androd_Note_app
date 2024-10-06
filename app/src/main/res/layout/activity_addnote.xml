@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".addnote">
+   <RelativeLayout
+       android:layout_marginTop="16dp"
+       android:layout_width="match_parent"
+       android:id="@+id/add_note"
+       android:layout_height="wrap_content">
+
+      <TextView
+          android:id="@+id/page_title"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="16dp"
+          android:text="ADD NOTE"
+          android:textColor="@color/black"
+          android:textSize="32sp"
+          android:textStyle="bold" />
+
+      <ImageView
+          android:id="@+id/save_btn"
+          android:layout_width="40dp"
+          android:layout_height="40dp"
+          android:layout_alignParentEnd="true"
+          android:layout_marginEnd="16dp"
+          android:src="@drawable/baseline_save_24"
+          android:padding="8dp" />
+
+   </RelativeLayout>
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:orientation="vertical"
+       android:layout_margin="16dp"
+       android:background="@color/white"
+       android:layout_height="wrap_content">
+
+      <EditText
+          android:id="@+id/topic"
+          android:layout_width="match_parent"
+          android:background="@drawable/rounded_corner"
+          android:layout_height="wrap_content"
+          android:hint="ENTER YOUR TOPIC"
+          android:textColorHint="@color/black"
+          android:textStyle="bold"
+          android:padding="16dp"
+          android:textSize="25sp" />
+
+         <EditText
+             android:id="@+id/note"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:background="@android:color/transparent"
+             android:textSize="16sp"
+             android:padding="15dp"
+             android:hint="ENTER YOUR NOTE"
+             android:textColorHint="@color/black"
+             android:textStyle="normal"
+             android:layout_margin="16dp" />
+   </LinearLayout>
+   <com.google.android.material.floatingactionbutton.FloatingActionButton
+       android:id="@+id/delete_btn"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_gravity="bottom|end"
+       android:layout_marginBottom="?actionBarSize"
+       android:layout_marginEnd="10dp"
+       android:src="@drawable/baseline_delete_24"
+       app:tint="?attr/colorControlNormal"
+       android:visibility="gone"
+       android:contentDescription="Delete Note" />
+</LinearLayout>
